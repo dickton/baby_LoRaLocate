@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LoraLocate</string>
+    <string name="main_txt_view_title">Lora定位</string>
+    <string name="main_btn_get_location">获取定位</string>
+    <string name="main_btn_manual_input">手动输入</string>
+    <string name="main_btn_dev_info">开发信息</string>
+    <string name="hint_rssi">信号强度</string>
+</resources>
