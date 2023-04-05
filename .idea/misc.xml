@@ -3,12 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Data/Android/LoraLocate/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.186" />
         <entry key="..\:/Data/Android/LoraLocate/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Data/Android/LoraLocate/app/src/main/res/drawable/ic_locate_svgrepo_com.xml" value="0.1" />
         <entry key="..\:/Data/Android/LoraLocate/app/src/main/res/layout/activity_dev_info.xml" value="0.14266304347826086" />
         <entry key="..\:/Data/Android/LoraLocate/app/src/main/res/layout/activity_get_location.xml" value="0.3338632750397456" />
-        <entry key="..\:/Data/Android/LoraLocate/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
-        <entry key="..\:/Data/Android/LoraLocate/app/src/main/res/layout/activity_manual_input.xml" value="0.3333333333333333" />
+        <entry key="..\:/Data/Android/LoraLocate/app/src/main/res/layout/activity_main.xml" value="0.6" />
+        <entry key="..\:/Data/Android/LoraLocate/app/src/main/res/layout/activity_manual_input.xml" value="0.1" />
         <entry key="..\:/Data/Android/LoraLocate/app/src/main/res/layout/include_lower.xml" value="0.1" />
         <entry key="..\:/Data/Android/LoraLocate/app/src/main/res/layout/include_upper.xml" value="0.18072916666666666" />
       </map>

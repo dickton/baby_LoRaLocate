@@ -25,11 +25,12 @@ public class GetLocationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_get_location);
         mapView = (MapView) findViewById(R.id.bmapView);
         baiduMap=mapView.getMap();
-        LatLng GEO_DLUT = new LatLng(39.090874,121.822957);
+        LatLng GEO_DLUT = new LatLng(39.092355,121.824447);
+
         MapStatusUpdate statusUpdate= MapStatusUpdateFactory.newLatLng(GEO_DLUT);
         baiduMap.setMapStatus(statusUpdate);
         MapStatus.Builder builder=new MapStatus.Builder();
-        builder.zoom(18);
+        builder.zoom(19);
         baiduMap.setMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
         generateSamplePoint();
     }
