@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
@@ -31,6 +32,11 @@ public class ManualInputActivity extends AppCompatActivity implements View.OnCli
     private EditText distanceView1;
     private EditText distanceView2;
     private EditText distanceView3;
+
+    private TextView baseStationLocationView1;
+    private TextView baseStationLocationView2;
+    private TextView baseStationLocationView3;
+
 
     private RSSI rssi;
 
@@ -59,6 +65,9 @@ public class ManualInputActivity extends AppCompatActivity implements View.OnCli
         distanceView1=findViewById(R.id.edit_text_1);
         distanceView2=findViewById(R.id.edit_text_2);
         distanceView3=findViewById(R.id.edit_text_3);
+        baseStationLocationView1=findViewById(R.id.station_location_A);
+        baseStationLocationView2=findViewById(R.id.station_location_B);
+        baseStationLocationView3=findViewById(R.id.station_location_C);
 
         //Init the Coordinate
         conversion=new CoordinateConversion(39.092355,121.824447);
@@ -67,6 +76,12 @@ public class ManualInputActivity extends AppCompatActivity implements View.OnCli
         rssi=new RSSI(conversion.LLtoMeter(BSLocation.getLocation1()),
                 conversion.LLtoMeter(BSLocation.getLocation2()),
                 conversion.LLtoMeter(BSLocation.getLocation3()));
+
+        addBaseStationToMap();
+        addBaseStationInfoToView();
+
+
+
 
         //将三个基站和坐标原点设置在地图上
 //        addPinToMap(0,0);
@@ -120,5 +135,28 @@ public class ManualInputActivity extends AppCompatActivity implements View.OnCli
                     .fromResource(R.drawable.icon_mark_a);
             OverlayOptions options=new MarkerOptions().position(point).icon(bitmap);
             baiduMap.addOverlay(options);
+    }
+
+    public void addLLPintoMap(double[] ll){
+        LatLng point=new LatLng(ll[0],ll[1]);
+        BitmapDescriptor bitmap=BitmapDescriptorFactory.fromResource(R.drawable.icon_base_station);
+        OverlayOptions options=new MarkerOptions().position(point).icon(bitmap);
+        baiduMap.addOverlay(options);
+    }
+
+    public void addBaseStationToMap(){
+        addLLPintoMap(BSLocation.getLocation1());
+        addLLPintoMap(BSLocation.getLocation2());
+        addLLPintoMap(BSLocation.getLocation3());
+    }
+
+    public void addBaseStationInfoToView(){
+        double[] l1=BSLocation.getLocation1();
+        double[] l2=BSLocation.getLocation2();
+        double[] l3=BSLocation.getLocation3();
+
+        baseStationLocationView1.setText(String.format("(%f, %f)",l1[1],l1[0]));
+        baseStationLocationView2.setText(String.format("(%f, %f)",l2[1],l2[0]));
+        baseStationLocationView3.setText(String.format("(%f, %f)",l3[1],l3[0]));
     }
 }

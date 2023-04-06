@@ -20,7 +20,7 @@
         android:layout_weight="2"
         android:orientation="vertical"
         android:paddingVertical="5dp"
-        android:paddingHorizontal="30dp"
+        android:paddingHorizontal="20dp"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
+            android:layout_marginHorizontal="10dp"
             android:layout_marginTop="5dp"
             >
             <TextView
@@ -42,18 +42,25 @@
                 android:layout_height="wrap_content"
                 android:text="基站A"
                 android:textSize="18dp"/>
-            <EditText
-                android:layout_width="150dp"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="5dp"
+                android:id="@+id/station_location_A"
+                />
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:id="@+id/edit_text_1"
                 android:hint="@string/hint_rssi"
-                android:inputType="numberDecimal"/>
+                android:inputType="numberDecimal"
+                android:textSize="15dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
+            android:layout_marginHorizontal="10dp"
             android:layout_marginTop="5dp"
             >
             <TextView
@@ -61,18 +68,25 @@
                 android:layout_height="wrap_content"
                 android:text="基站B"
                 android:textSize="18dp"/>
-            <EditText
-                android:layout_width="150dp"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="5dp"
+                android:id="@+id/station_location_B"
+                />
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:id="@+id/edit_text_2"
                 android:hint="@string/hint_rssi"
-                android:inputType="numberDecimal"/>
+                android:inputType="numberDecimal"
+                android:textSize="15dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
+            android:layout_marginHorizontal="10dp"
             android:layout_marginTop="5dp"
             >
             <TextView
@@ -80,19 +94,27 @@
                 android:layout_height="wrap_content"
                 android:text="基站C"
                 android:textSize="18dp"/>
-            <EditText
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:id="@+id/edit_text_3"
-                android:hint="@string/hint_rssi"
-                android:inputType="numberDecimal"/>
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="提交"
-                android:id="@+id/btn_submit"/>
+                android:layout_marginStart="5dp"
+                android:id="@+id/station_location_C"
+                />
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/edit_text_3"
+                android:hint="@string/hint_rssi"
+                android:inputType="numberDecimal"
+                android:textSize="15dp"/>
+
         </LinearLayout>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="提交"
+            android:id="@+id/btn_submit" />
     </LinearLayout>
 </LinearLayout>
